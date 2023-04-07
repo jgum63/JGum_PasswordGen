@@ -1,7 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
+// These four arrays will be used to construct the password
 
 let lowerAlpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 let upperAlpha = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
@@ -10,7 +10,11 @@ let specialChar = ['!', '@', '#', '$', '%', '&', '?']
 
 let builtArray = [];
 
+// This function is what will construct the password
+
 function generatePassword() {
+
+// These four if statements ask the user what they wish their password to be constructed of
 
   if(confirm("Do you want your password to have lowercase letters?")) {
 
@@ -35,6 +39,7 @@ function generatePassword() {
     
   }
 
+  // This is the for loop that randomly selects from the arrays based upon user answers
 
   let password = "";
   let passwordLength = prompt("How many characters do you want your password?");
@@ -57,5 +62,4 @@ function writePassword() {
 
 }
 
-// Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
